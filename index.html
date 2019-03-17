@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>working</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+<link rel="stylesheet" href="./style.css"><script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="./timesheet.js"></script>
+   
+  </head>
+  <body>
+
+    <div class="container">
+        <header class="rounded" id="custom-header">
+            <div>Employee Data Management</div>
+            <p>A comprehensive Directory of Employee Billable Hours</p>
+        </header>
+    </div>
+    <div class="container">
+        <form>
+            <div class="card">
+                <div class="card-header">
+                    Current Employees
+                </div>
+                <div class="container">
+                    <table class="table">
+                        <thread>
+                            <tr>
+                                <th scope="col">Employee Name</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">Months Worked</th>
+                                <th scope="col">Monthly Rate($)</th>
+                                <th scope="col">Total Billed ($)</th>
+                            </tr>
+                        </thread>
+                        <tbody id="final-append"></tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+        <br>
+        <div class="card card-bottom">
+            <div class="card-header">Add Employee</div>
+            <div class="container">
+                <form id="form-container">
+                    <div class="form-group">
+                        <label for="name-input">Employee Name</label>
+                        <input type="text" class="form-control" id="name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="role-input">Role</label>
+                        <input type="text" class="form-control" id="role" />
+                    </div>
+                    <div class="form-group">
+                        <label for="start-date-input">Start Date (mm/dd/yyyy)</label>
+                        <input type="text" class="form-control" id="startDate" />
+                    </div>
+                    <div class="form-group">
+                        <label for="monthly-rate-input">Monthly Rate</label>
+                        <input type="text" class="form-control" id="rate" />
+                    </div>
+                    <button class="btn btn-light" id="submit-button">
+                        Submit</button>
+            </div>
+            </form>
+        </div>
+  </body>
+</html>
