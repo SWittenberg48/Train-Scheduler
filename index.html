@@ -7,40 +7,35 @@
     <title>working</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-<link rel="stylesheet" href="./style.css"><script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <script src="./timesheet.js"></script>
+    <link rel="stylesheet" href="./Assets/css/reset.css">
+<link rel="stylesheet" href="./Assets/css/style.css">
    
   </head>
   <body>
 
     <div class="container">
+        
         <header class="rounded" id="custom-header">
-            <div>Employee Data Management</div>
-            <p>A comprehensive Directory of Employee Billable Hours</p>
+            <div>Train Schedule</div>
+            
         </header>
     </div>
     <div class="container">
         <form>
             <div class="card">
                 <div class="card-header">
-                    Current Employees
+                    Train Schedule
                 </div>
                 <div class="container">
                     <table class="table">
                         <thread>
                             <tr>
-                                <th scope="col">Employee Name</th>
-                                <th scope="col">Role</th>
-                                <th scope="col">Start Date</th>
-                                <th scope="col">Months Worked</th>
-                                <th scope="col">Monthly Rate($)</th>
-                                <th scope="col">Total Billed ($)</th>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                                
                             </tr>
                         </thread>
                         <tbody id="final-append"></tbody>
@@ -50,29 +45,35 @@
         </form>
         <br>
         <div class="card card-bottom">
-            <div class="card-header">Add Employee</div>
+            <div class="card-header">Add Your Train</div>
             <div class="container">
                 <form id="form-container">
                     <div class="form-group">
-                        <label for="name-input">Employee Name</label>
+                        <label for="name-input">Train Name</label>
                         <input type="text" class="form-control" id="name" />
                     </div>
                     <div class="form-group">
-                        <label for="role-input">Role</label>
-                        <input type="text" class="form-control" id="role" />
+                        <label for="destination-input">Destination</label>
+                        <input type="text" class="form-control" id="destination" />
                     </div>
                     <div class="form-group">
-                        <label for="start-date-input">Start Date (mm/dd/yyyy)</label>
-                        <input type="text" class="form-control" id="startDate" />
+                        <label for="firstTime-input">First Train </label>
+                        <input type="text" class="form-control" id="firstTime" />
                     </div>
                     <div class="form-group">
-                        <label for="monthly-rate-input">Monthly Rate</label>
-                        <input type="text" class="form-control" id="rate" />
+                        <label for="frequency-input">Frequency</label>
+                        <input type="text" class="form-control" id="frequency" />
                     </div>
+                   
                     <button class="btn btn-light" id="submit-button">
                         Submit</button>
             </div>
             </form>
         </div>
   </body>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script  type="text/javascript" src = 'Assets/javascript/app.js'></script>
 </html>
